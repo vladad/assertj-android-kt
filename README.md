@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vladad/assertj-android-kt.svg?branch=master)](https://travis-ci.org/vladad/assertj-android-kt)
+
 AssertJ Android KT
 ==================
 
