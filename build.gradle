@@ -21,7 +21,7 @@ ext {
     minSdkVersion = 15
     compileSdkVersion = 28
 
-    assertj = 'org.assertj:assertj-core:3.11.1'
+    assertj = 'org.assertj:assertj-core:2.9.1'
     supportAnnotations = 'androidx.annotation:annotation:1.0.1'
 }
 
