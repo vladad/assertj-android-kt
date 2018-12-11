@@ -34,17 +34,18 @@ install {
     }
 }
 
-task sourcesJar(type: Jar) {
+tasks.register("sourcesJar", Jar) {
     classifier = 'sources'
     from android.sourceSets.main.java.srcDirs
 }
 
-task javadoc(type: Javadoc) {
+tasks.register("javadoc", Javadoc) {
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc) {
+tasks.register("javadocJar", Jar) {
+    dependsOn javadoc
     classifier = 'javadoc'
     from javadoc.destinationDir
 }
@@ -54,10 +55,10 @@ artifacts {
     archives sourcesJar
 }
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
 bintray {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.apikey")
 
