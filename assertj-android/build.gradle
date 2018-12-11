@@ -64,4 +64,7 @@ ext {
     allLicenses = ["Apache-2.0"]
 }
 
-apply from: rootProject.file('gradle/publish.gradle')
+if (project.rootProject.file('local.properties').exists())
+{
+    apply from: rootProject.file('gradle/publish.gradle')
+}
