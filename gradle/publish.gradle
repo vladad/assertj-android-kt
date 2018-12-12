@@ -76,6 +76,10 @@ bintray {
         publicDownloadNumbers = true
         version {
             desc = libraryDescription
+            gpg {
+                sign = true
+                passphrase = properties.getProperty("bintray.gpg.password")
+            }
         }
     }
 }
