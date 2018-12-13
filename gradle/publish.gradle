@@ -1,11 +1,11 @@
-group = publishedGroupId
-version = libraryVersion
+group = GROUP
+version = VERSION_NAME
 
 install {
     repositories.mavenInstaller {
         pom.project {
             packaging 'aar'
-            groupId publishedGroupId
+            groupId GROUP
             artifactId artifact
 
             name libraryName
