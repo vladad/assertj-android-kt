@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/vladad/assertj-android-kt.svg?branch=master)](https://travis-ci.org/vladad/assertj-android-kt)
+[ ![Download](https://api.bintray.com/packages/vladad/maven/cz.vladad%3Aassertj-android-kt/images/download.svg) ](https://bintray.com/vladad/maven/cz.vladad%3Aassertj-android-kt/_latestVersion)
 
 AssertJ Android KT
 ==================
