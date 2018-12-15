@@ -18,11 +18,15 @@ allprojects {
 }
 
 ext {
-    minSdkVersion = 15
-    compileSdkVersion = 28
+    MinSdkVersion = 15
+    CompileSdkVersion = 28
 
-    assertj = 'org.assertj:assertj-core:2.9.1'
-    supportAnnotations = 'androidx.annotation:annotation:1.0.1'
+    AssertJ = 'org.assertj:assertj-core:2.9.1'
+    AndroidXAnnotation = 'androidx.annotation:annotation:1.0.1'
+
+    JUnit = 'junit:junit:4.12'
+    AndroidXTestCore = 'androidx.test:core:1.1.0'
+    Robolectric = 'org.robolectric:robolectric:4.1'
 }
 
 tasks.register("clean", Delete) {
