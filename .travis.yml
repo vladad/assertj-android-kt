@@ -10,3 +10,6 @@ android:
     - extra-google-m2repository
     - extra-android-m2repository
     - android-29
+
+jdk:
+  - openjdk15
