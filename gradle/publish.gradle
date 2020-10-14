@@ -1,34 +1,19 @@
 group = GROUP
 version = VERSION_NAME
 
-install {
-    repositories.mavenInstaller {
-        pom.project {
-            packaging 'aar'
-            groupId GROUP
-            artifactId artifact
 
-            name libraryName
-            description libraryDescription
-            url siteUrl
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
 
-            licenses {
-                license {
-                    name licenseName
-                    url licenseUrl
-                }
-            }
-            developers {
-                developer {
-                    id developerId
-                    name developerName
-                    email developerEmail
-                }
-            }
-            scm {
-                connection gitUrl
-                developerConnection gitUrl
-                url siteUrl
+                // You can then customize attributes of the publication as shown below.
+                groupId = GROUP
+                artifactId = artifact
+                version = version
             }
         }
     }

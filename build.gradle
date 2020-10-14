@@ -1,11 +1,11 @@
 buildscript {
-    ext.kotlin_version = '1.3.61'
+    ext.kotlin_version = '1.4.10'
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -14,19 +14,21 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" } // For Robolectric:4.5-SNAPSHOT
     }
 }
 
 ext {
     MinSdkVersion = 15
     CompileSdkVersion = 29
+    TargetSdkVersion = 29
 
     AssertJ = 'org.assertj:assertj-core:2.9.1'
     AndroidXAnnotation = 'androidx.annotation:annotation:1.1.0'
 
-    JUnit = 'junit:junit:4.13'
-    AndroidXTestCore = 'androidx.test:core:1.2.0'
-    Robolectric = 'org.robolectric:robolectric:4.3.1'
+    JUnit = 'junit:junit:4.13.1'
+    AndroidXTestCore = 'androidx.test:core:1.3.0'
+    Robolectric = 'org.robolectric:robolectric:4.5-SNAPSHOT'
 }
 
 tasks.register("clean", Delete) {
